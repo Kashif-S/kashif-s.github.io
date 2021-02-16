@@ -1,0 +1,68 @@
+.BgCanvas {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.Hero {
+    color: var(--navy);
+    z-index: 1;
+
+    width: 60vw;
+    height: 50vh;
+
+    position: absolute;
+    top: calc(50% - 25vh);
+    left: calc(50% - 25vw);
+}
+
+.Hero hr{
+    border: 1px solid var(--navy);
+}
+
+.Portrait {
+    position:absolute;
+    top: 50%;
+    left: 15%;
+
+    border-radius: 50%;
+
+    height: clamp(200px, 35vw, 350px);
+    width: clamp(200px, 35vw, 350px);
+
+    transform: translate(-50%, -50%);
+}
+
+.Text {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+
+    transform: translateY(-50%);
+
+    text-align: left;
+}
+
+.Text h1 {
+    font-size: clamp(25px, 5vw, 50px);
+}
+
+.Text h2 {
+    font-size: clamp(17.5px, 3.5vw, 35px);
+}
+
+.Text p {
+    font-size: clamp(12.5px, 2.5vw, 25px);
+}
+
+.Text a {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--navy);
+}
+
+.Text a:hover {
+    opacity: 0.7;
+}

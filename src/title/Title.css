@@ -1,0 +1,84 @@
+.BgCanvas {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.Title {
+    color: var(--white);
+    z-index: 1;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.BigHeading {
+    font-size: clamp(25px, 5vw, 50px);
+}
+
+.Highlight {
+    color: var(--cyan);
+}
+
+.Highlight::-moz-selection { background: var(--raspberry); }
+.Highlight::selection { background: var(--raspberry); }
+
+.Footer {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    height: calc(clamp(25px, 4vw, 40px) + 4vh);
+    width: 100%;
+}
+
+.Scroll {
+    position: absolute;
+    animation: fade-slide-up 1s 1s ease-out forwards,
+                pulse 2s 3s ease-out infinite;
+    width: clamp(25px, 4vw, 40px);
+    height: clamp(25px, 4vw, 40px);
+    top: 0px;
+    opacity: 0;
+    transition: top 0.5s;
+}
+
+.Footer:hover .Scroll {
+    top: 2vh;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: none;
+    }
+    100% {
+        transform: translateY(2rem);
+    }
+}
+
+@keyframes fade-slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: none;
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
